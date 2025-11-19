@@ -474,51 +474,6 @@ class WebApp:
             padding=ft.padding.all(20)
         )
 
-    # def send_email(self, name, email, company, country, service, message):
-    #     """Enviar email usando Gmail"""
-    #     try:
-    #         # Configuración del correo
-    #         sender_email = os.getenv('EMAIL_SENDER')
-    #         receiver_email = os.getenv('EMAIL_RECEIVER')
-    #         password = os.getenv('EMAIL_PASSWORD')
-
-    #         # Crear mensaje
-    #         msg = MIMEMultipart()
-    #         msg['From'] = sender_email
-    #         msg['To'] = receiver_email
-    #         msg['Subject'] = f"Solicitud de Servicio: {service}"
-
-    #         # Cuerpo del mensaje
-    #         body = f"""
-    #         Nueva solicitud de servicio recibida:
-
-    #         Nombre: {name}
-    #         Email: {email}
-    #         Empresa: {company}
-    #         País: {country}
-    #         Servicio solicitado: {service}
-
-    #         Mensaje:
-    #         {message}
-
-    #         ---
-    #         Este correo fue enviado desde el formulario de contacto de rponce66 - Soft & Finances
-    #         """
-
-    #         msg.attach(MIMEText(body, 'plain'))
-
-    #         # Conectar y enviar
-    #         server = smtplib.SMTP('smtp.gmail.com', 587)
-    #         server.starttls()
-    #         server.login(sender_email, password)
-    #         text = msg.as_string()
-    #         server.sendmail(sender_email, receiver_email, text)
-    #         server.quit()
-
-    #         return True
-    #     except (smtplib.SMTPException, OSError) as e:
-    #         print(f'Error al enviar email: {e}')
-
     def send_email(self, name, email, company, country, service, message):
         """Enviar email de contacto con SendGrid"""
         try:
