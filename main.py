@@ -1,6 +1,5 @@
 """rponce 66 web"""
 
-import webbrowser
 import os
 import flet as ft
 from sendgrid import SendGridAPIClient
