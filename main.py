@@ -453,7 +453,7 @@ class WebApp:
 
                         ft.ElevatedButton(
                             text=t['link_text'],
-                            on_click=lambda _: webbrowser.open(
+                            on_click=lambda _: self.page.launch_url(
                                 'https://rponce66.blogspot.com/'),
                             style=ft.ButtonStyle(
                                 bgcolor='#191970',
